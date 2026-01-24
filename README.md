@@ -4,7 +4,7 @@ A mobile-first Ionic + Angular application that teaches beginners the fundamenta
 
 ---
 
-## ✨ Features
+## Features
 
 - **Beginner-friendly lessons** focused on foundational snowboarding skills
 - **Technique breakdowns** for:
@@ -20,7 +20,7 @@ A mobile-first Ionic + Angular application that teaches beginners the fundamenta
 
 ---
 
-## 🧠 What You’ll Learn (In-App Topics)
+## What You’ll Learn (In-App Topics)
 
 ### Edge Control
 - How to identify and engage your **toe edge** and **heel edge**
@@ -42,15 +42,3 @@ A mobile-first Ionic + Angular application that teaches beginners the fundamenta
 - Falling safely and getting back up
 - Confidence-building progression guidance
 
----
-
-## 📸 Screenshots / Demo
-
-> Add screenshots or a short GIF once you have UI ready.
-
-Suggested folder:
-- `./docs/screenshots/`
-
-Then embed like:
-```md
-![Home](docs/screenshots/home.png)
