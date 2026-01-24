@@ -7,7 +7,12 @@ import {
   IonButtons,
   IonMenu,
   IonMenuButton,
+  IonAccordionGroup,
+  IonAccordion,
+  IonItem,
+  IonLabel,
 } from '@ionic/angular/standalone';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -21,6 +26,11 @@ import {
     IonButtons,
     IonMenu,
     IonMenuButton,
+    IonAccordionGroup,
+    IonAccordion,
+    IonItem,
+    IonLabel,
+    RouterModule,
   ],
 })
 export class HomePage {

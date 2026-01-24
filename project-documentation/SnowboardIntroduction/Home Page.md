@@ -26,7 +26,7 @@ import {
 
 ```html
 <!--Build the side menu-->
-<ion-menu contentId="main-content">
+<ion-menu side="end" contentId="main-content">
   <ion-header>
     <ion-toolbar>
       <ion-title>Topics</ion-title>
