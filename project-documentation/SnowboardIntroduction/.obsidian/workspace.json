@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Setup.md",
+                "file": "Lessons/Sequential Instruction.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Setup"
+              "title": "Sequential Instruction"
             }
           },
           {
@@ -200,6 +200,8 @@
   },
   "active": "42d4f907fc51da08",
   "lastOpenFiles": [
+    "Setup.md",
+    "Lessons/Sequential Instruction.md",
     "Lessons/Beginner Lessons/Standing Up.md",
     "Lessons/Instruction Text.md",
     "Lessons",
@@ -209,7 +211,6 @@
     "Background.md",
     "Main Menu.md",
     "Home Page.md",
-    "Setup.md",
     "Background",
     "Welcome.md"
   ]

@@ -1,3 +1,6 @@
-<ion-item>
+<ion-item
+  button="true"
+  [disabled]="disabled"
+  (click)="onClick()">
   <ion-text>{{ instructionText }}</ion-text>
 </ion-item>

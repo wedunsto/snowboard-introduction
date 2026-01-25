@@ -1,7 +1,7 @@
 <u>Create Ionic Angular application</u>: `ionic start`
 
 <u>Add Android as a supported platform in the project</u>:
-- `ng build`
+- `npx ng build`
 - `ionic capacitor add android`
 - <u>Set the Package ID</u>:
 	- "com.snowboard.starter"
