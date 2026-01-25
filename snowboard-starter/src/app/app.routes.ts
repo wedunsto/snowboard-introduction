@@ -17,5 +17,9 @@ export const routes: Routes = [
     path: 'test-toe-edge',
     loadComponent: () => import('./beginner-lessons/test-toe-edge/test-toe-edge.page').then( m => m.TestToeEdgePage)
   },
+  {
+    path: 'skating',
+    loadComponent: () => import('./beginner-lessons/skating/skating.page').then( m => m.SkatingPage)
+  },
 
 ];

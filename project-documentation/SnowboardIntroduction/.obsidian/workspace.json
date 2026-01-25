@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lessons/Beginner Lessons/Standing Up.md",
+                "file": "Setup.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Standing Up"
+              "title": "Setup"
             }
           },
           {
@@ -92,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "76557ac7806a5786",
@@ -108,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lessons/Beginner Lessons/Standing Up.md",
+                "file": "Setup.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Standing Up"
+              "title": "Backlinks for Setup"
             }
           },
           {
@@ -127,12 +128,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lessons/Beginner Lessons/Standing Up.md",
+                "file": "Setup.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Standing Up"
+              "title": "Outgoing links from Setup"
             }
           },
           {
@@ -170,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lessons/Beginner Lessons/Standing Up.md",
+                "file": "Setup.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Standing Up"
+              "title": "Outline of Setup"
             }
           }
         ]
@@ -199,8 +200,8 @@
   },
   "active": "42d4f907fc51da08",
   "lastOpenFiles": [
-    "Lessons/Instruction Text.md",
     "Lessons/Beginner Lessons/Standing Up.md",
+    "Lessons/Instruction Text.md",
     "Lessons",
     "Untitled.md",
     "Lessons/Beginner Lessons",
