@@ -13,58 +13,29 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Background.md",
+                "file": "Lessons/Beginner Lessons/Standing Up.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Background"
+              "title": "Standing Up"
             }
           },
           {
-            "id": "0c609d57079f0999",
+            "id": "e1ff888598fbacc3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Main Menu.md",
+                "file": "Lessons/Beginner Lessons/Standing Up.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Main Menu"
-            }
-          },
-          {
-            "id": "c3b68eb4b3223773",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Navigating to Different Lessons.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Navigating to Different Lessons"
-            }
-          },
-          {
-            "id": "22afb931b1ffa7b7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Home Page.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Home Page"
+              "title": "Standing Up"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -121,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "76557ac7806a5786",
@@ -138,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Navigating to Different Lessons.md",
+                "file": "Lessons/Beginner Lessons/Standing Up.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +118,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Navigating to Different Lessons"
+              "title": "Backlinks for Standing Up"
             }
           },
           {
@@ -157,12 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Navigating to Different Lessons.md",
+                "file": "Lessons/Beginner Lessons/Standing Up.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Navigating to Different Lessons"
+              "title": "Outgoing links from Standing Up"
             }
           },
           {
@@ -200,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Navigating to Different Lessons.md",
+                "file": "Lessons/Beginner Lessons/Standing Up.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Navigating to Different Lessons"
+              "title": "Outline of Standing Up"
             }
           }
         ]
@@ -227,13 +197,18 @@
       "bases:Create new base": false
     }
   },
-  "active": "c3b68eb4b3223773",
+  "active": "42d4f907fc51da08",
   "lastOpenFiles": [
-    "Main Menu.md",
+    "Lessons/Instruction Text.md",
+    "Lessons/Beginner Lessons/Standing Up.md",
+    "Lessons",
+    "Untitled.md",
+    "Lessons/Beginner Lessons",
     "Navigating to Different Lessons.md",
+    "Background.md",
+    "Main Menu.md",
     "Home Page.md",
     "Setup.md",
-    "Background.md",
     "Background",
     "Welcome.md"
   ]

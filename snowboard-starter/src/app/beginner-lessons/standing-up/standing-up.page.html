@@ -1,13 +1,14 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>standing-up</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header
+  title="Testing Heel Edge"
+  [isHomePage]=false>
+</app-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">standing-up</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="beginner-instructions">
+    @for(item of lessonInstructions; track item) {
+      <app-instruction-text
+        instructionText={{item}}>
+      </app-instruction-text>
+    }
+  </div>
 </ion-content>

@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    @if (!isHomePage) {
+      <ion-buttons slot="start">
+        <ion-button [routerLink]="['/home']">
+          <ion-icon name="home"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    }
+    <ion-title>{{ title }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
