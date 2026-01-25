@@ -5,9 +5,11 @@
 
 <ion-content [fullscreen]="true">
   <div class="beginner-instructions">
-    @for(item of lessonInstruction; track item) {
+    @for(item of lessonInstructions; track item) {
       <app-instruction-text
-        instructionText={{item}}>
+        [disabled]="isButtonDisabled(item)"
+        (instructionClick)="addInstructionText()"
+        [instructionText]="item">
       </app-instruction-text>
     }
   </div>

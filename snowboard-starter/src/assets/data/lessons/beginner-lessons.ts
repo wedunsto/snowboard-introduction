@@ -20,7 +20,7 @@ export const toeEdgeLesson = [
     "Slide the board around the lead foot, the board moves more freely"
 ];
 
-export const skating = [
+export const skatingLesson = [
     "Put about 65% of your weight on your lead foot",
     "Shift your hip over your lead foot with your knee and ankle bent",
     "Place trailing foot behind the heel edge",
