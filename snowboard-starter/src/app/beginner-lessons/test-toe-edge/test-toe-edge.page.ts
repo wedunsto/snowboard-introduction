@@ -4,6 +4,7 @@ import { IonContent } from '@ionic/angular/standalone';
 import { HeaderComponent } from 'src/app/shared/components/header/header.component';
 import { toeEdgeLesson } from 'src/assets/data/lessons/beginner-lessons';
 import { InstructionTextComponent } from 'src/app/shared/components/instruction-text/instruction-text.component';
+import { addInstructionText, isButtonDisabled } from 'src/app/shared/helper-functions/lesson-helper-functions';
 
 @Component({
   selector: 'app-test-toe-edge',
@@ -23,19 +24,19 @@ export class TestToeEdgePage {
 
   currentIndex: number = 1;
 
-  // If there is another instruction text, add it to the utility array
-    addInstructionText = () => {
-      if (this.currentIndex <= toeEdgeLesson.length - 1) {
-        this.lessonInstructions.push(toeEdgeLesson[this.currentIndex]);
-      }
-      this.currentIndex += 1;
-    }
-  
-    // Determine if an instruction text button is disabled
-    isButtonDisabled = (instructionText: string): boolean => {
-      if (this.currentIndex >= toeEdgeLesson.length - 1) {
-        return true;
-      }
-      return instructionText !== toeEdgeLesson[this.currentIndex - 1];
-    }
+  addInstructionText() {
+    this.currentIndex = addInstructionText(
+      this.currentIndex,
+      toeEdgeLesson,
+      this.lessonInstructions
+    );
+  }
+
+  isButtonDisabled(instructionText: string) {
+    return isButtonDisabled(
+      this.currentIndex,
+      instructionText,
+      toeEdgeLesson
+    )
+  }
 }
