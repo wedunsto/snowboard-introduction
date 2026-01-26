@@ -14,7 +14,7 @@ export const isButtonDisabled = (
     currentIndex: number,
     instructionText: string,
     lessons: string[]): boolean => {
-        if (currentIndex >= lessons.length - 1) {
+        if (currentIndex >= lessons.length) {
             return true;
         }
         return instructionText !== lessons[currentIndex - 1];

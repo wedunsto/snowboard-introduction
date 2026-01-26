@@ -21,5 +21,17 @@ export const routes: Routes = [
     path: 'skating',
     loadComponent: () => import('./beginner-lessons/skating/skating.page').then( m => m.SkatingPage)
   },
+  {
+    path: 'turn-skating',
+    loadComponent: () => import('./beginner-lessons/turn-skating/turn-skating.page').then( m => m.TurnSkatingPage)
+  },
+  {
+    path: 'climbing-up-hill',
+    loadComponent: () => import('./beginner-lessons/climbing-up-hill/climbing-up-hill.page').then( m => m.ClimbingUpHillPage)
+  },
+  {
+    path: 'riding-down-hill',
+    loadComponent: () => import('./beginner-lessons/riding-down-hill/riding-down-hill.page').then( m => m.RidingDownHillPage)
+  },
 
 ];
