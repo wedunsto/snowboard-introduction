@@ -33,5 +33,13 @@ export const routes: Routes = [
     path: 'riding-down-hill',
     loadComponent: () => import('./beginner-lessons/riding-down-hill/riding-down-hill.page').then( m => m.RidingDownHillPage)
   },
+  {
+    path: 'heel-stop',
+    loadComponent: () => import('./beginner-lessons/heel-stop/heel-stop.page').then( m => m.HeelStopPage)
+  },
+  {
+    path: 'toe-stop',
+    loadComponent: () => import('./beginner-lessons/toe-stop/toe-stop.page').then( m => m.ToeStopPage)
+  },
 
 ];
