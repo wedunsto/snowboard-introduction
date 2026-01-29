@@ -41,5 +41,9 @@ export const routes: Routes = [
     path: 'toe-stop',
     loadComponent: () => import('./beginner-lessons/toe-stop/toe-stop.page').then( m => m.ToeStopPage)
   },
+  {
+    path: 'standing-with-bindings',
+    loadComponent: () => import('./beginner-lessons/standing-with-bindings/standing-with-bindings.page').then( m => m.StandingWithBindingsPage)
+  },
 
 ];

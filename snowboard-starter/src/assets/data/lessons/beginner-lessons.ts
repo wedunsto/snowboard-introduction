@@ -73,3 +73,14 @@ export const toeStopLesson = [
     "Engage the toe edge of the lead knee over the toes, allowing the board to tilt",
     "Once the board is swinging around, engage the toe edge of the trailing foot by pressing the knee over the toes"
 ];
+
+export const standingUpWithBothBindings = [
+    "Sit down with both feet engaging the heel edge",
+    "Use your lead hand to grab the toe edge",
+    "Scoot your tail bone to your board",
+    "Squat on top of your board",
+    "Push off your back foot",
+    "Stand straight up",
+    "Keep your toes up, engaging your heel edge",
+    "Keep even weight between both feet"
+];
