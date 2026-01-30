@@ -1,0 +1,44 @@
+<ion-app>
+  <ion-menu side="end" contentId="main-content">
+    <ion-header>
+      <ion-title>Topics</ion-title>
+    </ion-header>
+    <ion-content>
+      <ion-accordion-group>
+        <ion-accordion value="first">
+          <ion-item slot="header">
+            <ion-label>Beginner Skills</ion-label>
+          </ion-item>
+          <div slot="content">
+            <ion-item [routerLink]="['/standing-up']" routerDirection="forward">
+              <ion-label>Testing Heel Edge</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/test-toe-edge']" routerDirection="forward">
+              <ion-label>Testing Toe Edge</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/skating']" routerDirection="forward">
+              <ion-label>Skating</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/turn-skating']" routerDirection="forward">
+              <ion-label>Turning While Skating</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/climbing-up-hill']" routerDirection="forward">
+              <ion-label>Climbing Up Hill</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/heel-stop']" routerDirection="forward">
+              <ion-label>Heel Stopping</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/toe-stop']" routerDirection="forward">
+              <ion-label>Toe Stopping</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/standing-with-bindings']" routerDirection="forward">
+              <ion-label>Standing With Bindings</ion-label>
+            </ion-item>
+          </div>
+        </ion-accordion>
+      </ion-accordion-group>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-app>

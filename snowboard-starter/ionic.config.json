@@ -1,0 +1,7 @@
+{
+  "name": "snowboard-starter",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
