@@ -54,6 +54,16 @@
             </ion-item>
           </div>
         </ion-accordion>
+        <ion-accordion value="second">
+          <ion-item slot="header">
+            <ion-label>Beginner Drills</ion-label>
+          </ion-item>
+          <div slot="content">
+            <ion-item [routerLink]="['/practice-skating']" routerDirection="forward">
+              <ion-label>Practice Skating</ion-label>
+            </ion-item>
+          </div>
+        </ion-accordion>
       </ion-accordion-group>
     </ion-content>
   </ion-menu>

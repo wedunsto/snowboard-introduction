@@ -74,5 +74,9 @@ export const routes: Routes = [
     path: 's-turn',
     loadComponent: () => import('./beginner-lessons/s-turn/s-turn.page').then( m => m.STurnPage)
   },
+  {
+    path: 'practice-skating',
+    loadComponent: () => import('./beginner-drills/practice-skating/practice-skating.page').then( m => m.PracticeSkatingPage)
+  },
 
 ];
