@@ -1,13 +1,19 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>practice-skating</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header
+  title="Skating Drill"
+  [isHomePage]=false>
+</app-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">practice-skating</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<div class="beginner-instructions">
+  <ion-item>
+    <ion-input label="How many reps do you want?" placeholder="Enter reps"></ion-input>
+  </ion-item>
+    @for(item of lessonInstructions; track item) {
+      <app-instruction-text
+        [disabled]="isButtonDisabled(item)"
+        (instructionClick)="addInstructionText()"
+        [instructionText]="item">
+      </app-instruction-text>
+    }
+  </div>
 </ion-content>

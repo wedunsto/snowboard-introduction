@@ -4,8 +4,8 @@ interface groupLesson {
 }
 
 export const standingUpLesson: string[] = [
-    "Put your lead foot in your lead foot binding and keep the tail foot out of the tail foot binding",
-    "Put the tail foot behind the heel edge",
+    "Put your lead foot in your lead foot binding and keep the trailing foot out of the trailing foot binding",
+    "Put the trailing foot behind the heel edge",
     "Raise the toe edge so the heel edge is in the snow",
     "Move the board left and right to feel the edge in the snow",
     "Try to push the board perpendicular to the edge. It's pretty locked into the the edge",
@@ -26,15 +26,15 @@ export const toeEdgeLesson: string[] = [
 ];
 
 export const skatingLesson: string[] = [
-    "(*)Keep your eyes up, your spine up, and navigate your board",
+    "Keep your eyes up. Keep your spine up. Do not rush",
     "Put about 65% of your weight on your lead foot",
     "Shift your hip over your lead foot with your knee and ankle bent",
     "Place trailing foot behind the heel edge",
+    "Keep your knees bent",
     "Take small steps with the trailing foot in the direction of the lead foot",
     "As the board picks up momentum, place the trailing foot against the trailing binding",
     "Keep the lead shoulder, hip, and board aligned and in the same direction",
     "Take small progressive steps",
-    "Keep your knees bent"
 ];
 
 export const turnSkatingLesson: string[] = [
@@ -64,25 +64,29 @@ export const ridingDownHillLesson: string[] = [
 ];
 
 export const heelStopLesson: string[] = [
+    "Hang the trailing foot slightly over the heel edge",
     "Pretend the lead knee is a door",
     "Rotate the lead knee 'open' or out",
     "Keep the shoulder and hip in the same direction",
-    "Engage the heel edge of the lead foot by lifting the toes",
-    "Once the board is swinging around, engage the heel edge of the trailing foot by lifing the toes"
+    "Engage the lead foot heel edge by lifting the toes",
+    "Allow the board to swing around",
+    "Engage the trailing foot heel edge by pressing the heel into the snow"
 ];
 
 export const toeStopLesson: string[] = [
+    "Hand the trailing foot slight over the toe edge",
     "Pretend the lead knee is an open door",
     "Rotate the knee 'closed' or in",
     "Keep the shoulder and hip in the direction of the turn",
-    "Engage the toe edge of the lead knee over the toes, allowing the board to tilt",
-    "Once the board is swinging around, engage the toe edge of the trailing foot by pressing the knee over the toes"
+    "Engage the lead foot toe edge by bending the knee over the toes",
+    "Allow the board to swing around",
+    "Engage the toe edge of the trailing foot by pressing the toe into the snow"
 ];
 
 export const standingUpWithBothBindings: string[] = [
     "Sit down with both feet engaging the heel edge",
     "Use your lead hand to grab the toe edge",
-    "Scoot your tail bone to your board",
+    "Scoot your trailing bone to your board",
     "Squat on top of your board",
     "Push off your back foot",
     "Stand straight up",
