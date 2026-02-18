@@ -4,8 +4,9 @@ import { IonContent } from '@ionic/angular/standalone';
 import { InstructionTextComponent } from 'src/app/shared/components/instruction-text/instruction-text.component';
 import { HeaderComponent } from 'src/app/shared/components/header/header.component';
 import { Lesson } from 'src/app/shared/concrete-classes/lessson';
-import { fallingLeaf } from 'src/assets/data/lessons/beginner-lessons';
+import { catchingAnEdge, fallingLeaf } from 'src/assets/data/lessons/beginner-lessons';
 import { addInstructionText, isButtonDisabled } from 'src/app/shared/helper-functions/lesson-helper-functions';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-falling-leaf',
@@ -20,6 +21,10 @@ import { addInstructionText, isButtonDisabled } from 'src/app/shared/helper-func
   ]
 })
 export class FallingLeafPage extends Lesson {
+  constructor(private alertCtrl: AlertController) {
+    super();
+  }
+
   override completeLessonInstructions = fallingLeaf.find(l => l.type === "heel")?.lesson??[];
 
   override lessonInstructions = [this.completeLessonInstructions[0]];
@@ -45,4 +50,15 @@ export class FallingLeafPage extends Lesson {
       this.toeInstructions
     )
   }
+
+  
+    async ionViewDidEnter() {
+      const alert = await this.alertCtrl.create({
+        header: "Things To Remember",
+        message: catchingAnEdge,
+        buttons: ["Ok"],
+      });
+  
+      await alert.present();
+    }
 }

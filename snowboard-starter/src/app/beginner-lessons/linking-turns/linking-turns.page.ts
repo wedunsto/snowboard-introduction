@@ -4,7 +4,8 @@ import { IonContent } from '@ionic/angular/standalone';
 import { HeaderComponent } from 'src/app/shared/components/header/header.component';
 import { InstructionTextComponent } from 'src/app/shared/components/instruction-text/instruction-text.component';
 import { Lesson } from 'src/app/shared/concrete-classes/lessson';
-import { linkingTurns } from 'src/assets/data/lessons/beginner-lessons';
+import { fallLineDuration, linkingTurns } from 'src/assets/data/lessons/beginner-lessons';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-linking-turns',
@@ -19,7 +20,21 @@ import { linkingTurns } from 'src/assets/data/lessons/beginner-lessons';
   ]
 })
 export class LinkingTurnsPage extends Lesson {
+  constructor(private alertCtrl: AlertController) {
+    super();
+  }
+
   override completeLessonInstructions = linkingTurns;
 
   override lessonInstructions = [this.completeLessonInstructions[0]];
+
+  async ionViewDidEnter() {
+    const alert = this.alertCtrl.create({
+      header: "Things To Remember",
+      message: fallLineDuration,
+      buttons: ["Ok"],
+    });
+
+    (await alert).present();
+  }
 }

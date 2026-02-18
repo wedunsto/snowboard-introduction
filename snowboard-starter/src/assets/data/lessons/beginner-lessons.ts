@@ -94,7 +94,7 @@ export const standingUpWithBothBindings: string[] = [
     "Keep even weight between both feet"
 ];
 
-export const catchingAnEdge: string = "Anytime you slide down hill, lean up hill";
+export const catchingAnEdge: string = "Anytime you slide down hill, lean up hill. Never engage the down hill edge";
 
 export const managingSpeed: groupLesson[] = [
     {
@@ -152,25 +152,30 @@ export const approachFallLine: string[] = [
 export const kneeSteering: string[] = [
     "Use your lead shoulder to point in the direction you want to go",
     "Use your lead knee to turn across the fall line",
-    "Place about 65% of your weight on your lead foot"
+    "'Open' the knee to turn heel side",
+    "Press the shin toward the toes to turn toe side",
+    "Place about 65% of your weight on your lead foot",
+    "Use your trailing foot as a rudder",
+    "After initiating the heel side turn, 'kick' the trailing foot heel forward to engage the heel edge",
+    "After initiating the toe side turn, 'kick' the trailing foot toes backward to engage the toe edge",
 ];
 
-export const fallLineDuration: string = "Use a duration that you are comfortable with";
+export const fallLineDuration: string = "Use a turn and fall line duration that you are comfortable with. Do not stay in a turn too long.";
 
 export const linkingTurns: string[] = [
     "Start by pointing your board down the fall line",
     "Utilize knee steering to go in the direction you want to go",
     "Engage the uphill edge and travel across the fall line",
     "Evenly distribute your weight between both feet",
-    "Point you board down the fall line",
-    "Count to 3* seconds",
-    "Utilize knee steering to go in the opposite direction",
+    "Utilize knee steering to point you board down the fall line",
+    "After some time, utilize knee steering to go in the opposite direction",
     "Engage the uphill edge and travel across the fall line",
     "Evenly distribute your weight between both feet",
     "Repeat",
 ];
 
 export const chairLift: string[] = [
+    "Ensure your high backs are down",
     "Keep your eyes up",
     "Keep your shoulders, hips, and board in the same direction",
     "Skate up to the chair lift",
@@ -185,21 +190,19 @@ export const chairLift: string[] = [
     "Take your trailing hand and grab the back of the chair",
     "Scoot to the edge of the chair",
     "Point your lead hip and the nose of the board straight out toward the rail",
-    "Look out where you want to do",
-    "Don't stare at the ground",
+    "Look out where you want to do and don't stare at the ground",
     "Keep your body straight and aligned",
     "Start to stand up when the chair lift reaches the flat part",
     "Slightly push off the back of the chair, riding off the chair lift",
-    "Keep an athletic stance",
-    "Apply about 65% of your weight on your lead foot"
+    "Apply about 65% of your weight on your lead foot and keep an athletic stance"
 ];
 
 export const STurn: string[] = [
-    "Make a heel side turn",
-    "Maintain the turn duration for 5* seconds",
+    "Make a heel side turn using knee steering",
+    "Maintain the turn duration",
     "Follow the linking turn steps without coming to a full stop",
-    "Make a toe side turn",
-    "Maintain the turn duration for 5* seconds",
+    "Make a toe side turn using knee steering",
+    "Maintain the turn duration",
     "Speed up by reducing the turn duration",
     "Slow down by extending the turn duration"
 ];
