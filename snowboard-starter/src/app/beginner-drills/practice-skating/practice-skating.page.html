@@ -4,16 +4,24 @@
 </app-header>
 
 <ion-content [fullscreen]="true">
-<div class="beginner-instructions">
-  <ion-item>
-    <ion-input label="How many reps do you want?" placeholder="Enter reps"></ion-input>
-  </ion-item>
-    @for(item of lessonInstructions; track item) {
-      <app-instruction-text
-        [disabled]="isButtonDisabled(item)"
-        (instructionClick)="addInstructionText()"
-        [instructionText]="item">
-      </app-instruction-text>
+  <div class="beginner-instructions">
+    <form
+      [formGroup]="drillForm">
+      <div class="reps-question">
+        <p class="reps-label">How many reps do you want?</p>
+        <ion-input
+          placeholder="Enter reps"
+          formControlName="reps"></ion-input>
+      </div>
+    </form>
+    @if (reps) {
+      @for(item of lessonInstructions; track item) {
+        <app-instruction-text
+          [disabled]="isButtonDisabled(item)"
+          (instructionClick)="addInstructionText()"
+          [instructionText]="item">
+        </app-instruction-text>
+      } 
     }
   </div>
 </ion-content>

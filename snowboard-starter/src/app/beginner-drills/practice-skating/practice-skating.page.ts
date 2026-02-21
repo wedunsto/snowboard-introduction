@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   IonContent,
-  IonItem,
-  IonInput
+  IonInput,
 } from '@ionic/angular/standalone';
 import { Drill } from 'src/app/shared/concrete-classes/drills';
 import { practiceSkating } from 'src/assets/data/drills/beginner-drills';
 import { HeaderComponent } from 'src/app/shared/components/header/header.component';
 import { InstructionTextComponent } from 'src/app/shared/components/instruction-text/instruction-text.component';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-practice-skating',
@@ -20,14 +20,30 @@ import { InstructionTextComponent } from 'src/app/shared/components/instruction-
     CommonModule,
     HeaderComponent,
     InstructionTextComponent,
-    IonItem,
-    IonInput
+    IonInput,
+    FormsModule,
+    ReactiveFormsModule
     ]
 })
 export class PracticeSkatingPage extends Drill {
-  override reps = 5;
+  constructor(fb: FormBuilder) {
+    super(fb);
+  }
 
-  override completeLessonInstructions = practiceSkating(this.reps);
+  reps !: number;
 
-  override lessonInstructions = [this.completeLessonInstructions[0]];
+  override ngOnInit() {
+    super.ngOnInit();
+
+    // Initialize drill instructions
+    this.reps = this.drillForm.get('reps')?.value ?? 0;
+    this.completeLessonInstructions = practiceSkating(this.drillForm.get('reps')?.value ?? 0);
+    this.lessonInstructions = [this.completeLessonInstructions[0]];
+
+    // Update drill instructions
+    this.drillForm.get('reps')?.valueChanges.subscribe((value) => {
+      this.reps = value ?? 0;
+      this.completeLessonInstructions = practiceSkating(value ?? 0);
+    })
+  }
 }
