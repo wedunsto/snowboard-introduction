@@ -15,6 +15,10 @@ export class Drill extends Lesson implements OnInit {
 
    drillForm !: ReturnType<FormBuilder['group']>;
 
+   reps !: number;
+
+   duration !: number;
+
    ngOnInit() {
       // Create the form when the component initializes
       this.drillForm = this.fb.group({

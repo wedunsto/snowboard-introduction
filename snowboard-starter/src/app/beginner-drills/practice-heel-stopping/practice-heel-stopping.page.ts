@@ -1,31 +1,28 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {
-  IonContent,
-  IonInput,
-} from '@ionic/angular/standalone';
+import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { IonContent, IonInput } from '@ionic/angular/standalone';
 import { Drill } from 'src/app/shared/concrete-classes/drills';
-import { practiceSkating } from 'src/assets/data/drills/beginner-drills';
+import { practiceHeelStoppingOneFoot } from 'src/assets/data/drills/beginner-drills';
 import { HeaderComponent } from 'src/app/shared/components/header/header.component';
 import { InstructionTextComponent } from 'src/app/shared/components/instruction-text/instruction-text.component';
-import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-practice-skating',
-  templateUrl: './practice-skating.page.html',
-  styleUrls: ['./practice-skating.page.scss'],
+  selector: 'app-practice-heel-stopping',
+  templateUrl: './practice-heel-stopping.page.html',
+  styleUrls: ['./practice-heel-stopping.page.scss'],
   standalone: true,
   imports: [
     IonContent,
-    CommonModule,
-    HeaderComponent,
-    InstructionTextComponent,
     IonInput,
-    FormsModule,
-    ReactiveFormsModule
-    ]
+    CommonModule,
+    ReactiveFormsModule,
+    HeaderComponent,
+    InstructionTextComponent
+  ]
 })
-export class PracticeSkatingPage extends Drill {
+export class PracticeHeelStoppingPage extends Drill {
+
   constructor(fb: FormBuilder) {
     super(fb);
   }
@@ -35,7 +32,7 @@ export class PracticeSkatingPage extends Drill {
 
     // Initialize drill instructions
     this.reps = this.drillForm.get('reps')?.value ?? 0;
-    this.completeLessonInstructions = practiceSkating;
+    this.completeLessonInstructions = practiceHeelStoppingOneFoot;
     this.lessonInstructions = [this.completeLessonInstructions[0]];
 
     // Update drill instructions
@@ -43,4 +40,5 @@ export class PracticeSkatingPage extends Drill {
       this.reps = value ?? 0;
     })
   }
+
 }

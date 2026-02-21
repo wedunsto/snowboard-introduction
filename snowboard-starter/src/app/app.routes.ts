@@ -77,6 +77,25 @@ export const routes: Routes = [
   {
     path: 'practice-skating',
     loadComponent: () => import('./beginner-drills/practice-skating/practice-skating.page').then( m => m.PracticeSkatingPage)
+  },  {
+    path: 'practice-heel-stopping',
+    loadComponent: () => import('./beginner-drills/practice-heel-stopping/practice-heel-stopping.page').then( m => m.PracticeHeelStoppingPage)
   },
+  {
+    path: 'practice-toe-stopping',
+    loadComponent: () => import('./beginner-drills/practice-toe-stopping/practice-toe-stopping.page').then( m => m.PracticeToeStoppingPage)
+  },
+  {
+    path: 'practice-heel-falling-leaf',
+    loadComponent: () => import('./beginner-drills/practice-heel-falling-leaf/practice-heel-falling-leaf.page').then( m => m.PracticeHeelFallingLeafPage)
+  },
+  {
+    path: 'practice-toe-falling-leaf',
+    loadComponent: () => import('./beginner-drills/practice-toe-falling-leaf/practice-toe-falling-leaf.page').then( m => m.PracticeToeFallingLeafPage)
+  },
+  {
+    path: 'practice-s-turn',
+    loadComponent: () => import('./beginner-drills/practice-s-turn/practice-s-turn.page').then( m => m.PracticeSTurnPage)
+  }
 
 ];
