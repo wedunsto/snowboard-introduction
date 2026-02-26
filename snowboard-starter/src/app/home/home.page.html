@@ -1,30 +1,4 @@
-<ion-menu side="end" contentId="main-content">
-  <ion-header>
-    <ion-title>Topics</ion-title>
-  </ion-header>
-  <ion-content>
-    <ion-accordion-group>
-      <ion-accordion value="first">
-        <ion-item slot="header">
-          <ion-label>Beginner Skills</ion-label>
-        </ion-item>
-        <div slot="content">
-          <ion-item [routerLink]="['/standing-up']" routerDirection="forward">
-            <ion-label>Standing Up</ion-label>
-          </ion-item>
-        </div>
-      </ion-accordion>
-    </ion-accordion-group>
-  </ion-content>
-</ion-menu>
-
-<div class="ion-page" id="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="end">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title>Snowboard Starter</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</div>
+<app-header
+  title="Snowboard Starter"
+  [isHomePage]=true>
+</app-header>

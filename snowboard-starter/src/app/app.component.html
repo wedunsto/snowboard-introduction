@@ -1,3 +1,87 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="end" contentId="main-content">
+    <ion-header>
+      <ion-title>Topics</ion-title>
+    </ion-header>
+    <ion-content>
+      <ion-accordion-group>
+        <ion-accordion value="first">
+          <ion-item slot="header">
+            <ion-label>Beginner Skills</ion-label>
+          </ion-item>
+          <div slot="content">
+            <ion-item [routerLink]="['/standing-up']" routerDirection="forward">
+              <ion-label>Testing Heel Edge</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/test-toe-edge']" routerDirection="forward">
+              <ion-label>Testing Toe Edge</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/skating']" routerDirection="forward">
+              <ion-label>Skating</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/turn-skating']" routerDirection="forward">
+              <ion-label>Turning While Skating</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/climbing-up-hill']" routerDirection="forward">
+              <ion-label>Climbing Up Hill</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/heel-stop']" routerDirection="forward">
+              <ion-label>Heel Stopping</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/toe-stop']" routerDirection="forward">
+              <ion-label>Toe Stopping</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/standing-with-bindings']" routerDirection="forward">
+              <ion-label>Standing With Bindings</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/managing-speed']" routerDirection="forward">
+              <ion-label>Managing Speed</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/falling-leaf']" routerDirection="forward">
+              <ion-label>Falling Leaf</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/knee-steering']" routerDirection="forward">
+              <ion-label>Knee Steering</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/linking-turns']" routerDirection="forward">
+              <ion-label>Linking Turns</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/chair-lift']" routerDirection="forward">
+              <ion-label>Chair Lift</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/s-turn']" routerDirection="forward">
+              <ion-label>S Turn</ion-label>
+            </ion-item>
+          </div>
+        </ion-accordion>
+        <ion-accordion value="second">
+          <ion-item slot="header">
+            <ion-label>Beginner Drills</ion-label>
+          </ion-item>
+          <div slot="content">
+            <ion-item [routerLink]="['/practice-skating']" routerDirection="forward">
+              <ion-label>Practice Skating</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/practice-heel-stopping']" routerDirection="forward">
+              <ion-label>Practice Heel Stopping</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/practice-toe-stopping']" routerDirection="forward">
+              <ion-label>Practice Toe Stopping</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/practice-heel-falling-leaf']" routerDirection="forward">
+              <ion-label>Practice Heel Falling Leaf</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/practice-toe-falling-leaf']" routerDirection="forward">
+              <ion-label>Practice Toe Falling Leaf</ion-label>
+            </ion-item>
+            <ion-item [routerLink]="['/practice-s-turn']" routerDirection="forward">
+              <ion-label>Practice S Turn</ion-label>
+            </ion-item>
+          </div>
+        </ion-accordion>
+      </ion-accordion-group>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
 </ion-app>

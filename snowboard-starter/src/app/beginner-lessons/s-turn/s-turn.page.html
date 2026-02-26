@@ -1,0 +1,16 @@
+<app-header
+  title="S Turn"
+  [isHomePage]=false>
+</app-header>
+
+<ion-content [fullscreen]="true">
+<div class="beginner-instructions">
+    @for(item of lessonInstructions; track item) {
+      <app-instruction-text
+        [disabled]="isButtonDisabled(item)"
+        (instructionClick)="addInstructionText()"
+        [instructionText]="item">
+      </app-instruction-text>
+    }
+  </div>
+</ion-content>

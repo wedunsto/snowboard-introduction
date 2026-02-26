@@ -1,0 +1,27 @@
+<app-header
+  title="Skating Drill"
+  [isHomePage]=false>
+</app-header>
+
+<ion-content [fullscreen]="true">
+  <div class="beginner-instructions">
+    <form
+      [formGroup]="drillForm">
+      <div class="reps-question">
+        <p class="reps-label">How many reps do you want?</p>
+        <ion-input
+          placeholder="Enter reps"
+          formControlName="reps"></ion-input>
+      </div>
+    </form>
+    @if (reps) {
+      @for(item of lessonInstructions; track item) {
+        <app-instruction-text
+          [disabled]="isButtonDisabled(item)"
+          (instructionClick)="addInstructionText()"
+          [instructionText]="item">
+        </app-instruction-text>
+      } 
+    }
+  </div>
+</ion-content>

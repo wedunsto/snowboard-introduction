@@ -1,0 +1,26 @@
+<app-header
+  title="Managing Speed"
+  [isHomePage]=false>
+</app-header>
+
+<ion-content [fullscreen]="true">
+<div class="beginner-instructions">
+    <p>Manage Heel Side Speed</p>
+    @for(item of lessonInstructions; track item) {
+      <app-instruction-text
+        [disabled]="isButtonDisabled(item)"
+        (instructionClick)="addInstructionText()"
+        [instructionText]="item">
+      </app-instruction-text>
+    }
+    <p>Manage Toe Side Speed</p>
+    @for(item of toeLessonInstructions; track item) {
+      <app-instruction-text
+        [disabled]="isToeButtonDisabled(item)"
+        (instructionClick)="addToeInstructionText()"
+        [instructionText]="item"
+      >
+      </app-instruction-text>
+    }
+  </div>
+</ion-content>
