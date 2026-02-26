@@ -2,3 +2,15 @@
   title="Snowboard Starter"
   [isHomePage]=true>
 </app-header>
+
+<ion-content [fullscreen]="true">
+  <div class="menu-items">
+    <button
+      class="menu-button"
+      type="button"
+      (click)="navigateToPlanATrip()">
+      <img src="/assets/icon/planATrip.png" />
+      <span class="menu-button-text">Plan A Trip</span>
+    </button>
+  </div>
+</ion-content>

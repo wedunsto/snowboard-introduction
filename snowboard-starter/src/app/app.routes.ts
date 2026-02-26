@@ -96,6 +96,10 @@ export const routes: Routes = [
   {
     path: 'practice-s-turn',
     loadComponent: () => import('./beginner-drills/practice-s-turn/practice-s-turn.page').then( m => m.PracticeSTurnPage)
+  },
+  {
+    path: 'trip-planner-form',
+    loadComponent: () => import('./trip-planner/trip-planner-form/trip-planner-form.page').then( m => m.TripPlannerFormPage)
   }
 
 ];
