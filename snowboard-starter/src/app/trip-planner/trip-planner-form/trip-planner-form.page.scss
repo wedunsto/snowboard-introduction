@@ -1,0 +1,14 @@
+ion-content {
+    .trip-planner-form {
+        margin: 1rem;
+        .trip-planner-dates {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    .submit-button {
+        display: flex;
+        justify-content: center;
+    }
+}

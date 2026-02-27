@@ -2,5 +2,33 @@
 </app-header-menu>
 
 <ion-content [fullscreen]="true">
-
+  <div class="trip-planner-form">
+    <form [formGroup]="tripForm">
+      <app-form-input
+        title="Destination"
+        placeholder="e.g., Beech Mountain, NC, USA">
+      </app-form-input>
+      <div class="trip-planner-dates">
+        <app-form-input
+          title="Arrival Date"
+          type="date"
+          datetimeId="arrival">
+        </app-form-input>
+        <app-form-input
+          title="Departure Date"
+          type="date"
+          datetimeId="departure">
+        </app-form-input>
+      </div>
+      <app-form-input
+        title="Budget ($)"
+        placeholder="e.g., 2500">
+      </app-form-input>
+    </form>
+  </div>
+  <div class="submit-button">
+    <ion-buttons>
+      <ion-button>Create Trip</ion-button>
+    </ion-buttons>
+  </div>
 </ion-content>

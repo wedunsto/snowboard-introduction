@@ -1,8 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AbstractControl, FormBuilder, ReactiveFormsModule, ValidationErrors, Validators } from '@angular/forms';
-import { IonContent } from '@ionic/angular/standalone';
+import {
+  AbstractControl,
+  FormBuilder,
+  ReactiveFormsModule,
+  ValidationErrors,
+  Validators
+} from '@angular/forms';
+import {
+  IonContent,
+  IonButtons,
+  IonButton
+} from '@ionic/angular/standalone';
 import { HeaderMenuComponent } from 'src/app/shared/components/header-menu/header-menu.component';
+import { FormInputComponent } from '../components/form-input/form-input.component';
 
 @Component({
   selector: 'app-trip-planner-form',
@@ -13,7 +24,10 @@ import { HeaderMenuComponent } from 'src/app/shared/components/header-menu/heade
     IonContent,
     CommonModule,
     ReactiveFormsModule,
-    HeaderMenuComponent
+    HeaderMenuComponent,
+    FormInputComponent,
+    IonButtons,
+    IonButton
   ]
 })
 export class TripPlannerFormPage implements OnInit {

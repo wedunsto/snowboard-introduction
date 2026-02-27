@@ -1,0 +1,19 @@
+<div class="form-input-item">
+  <p>{{ title() }}</p>
+  @if (type() === 'destination' || type() === 'budget') {
+    <ion-input [placeholder]="placeholder()"></ion-input>
+  }
+  @if (type() === 'date') {
+    <ion-datetime-button [datetime]="datetimeId()">
+    </ion-datetime-button>
+
+    <ion-modal [keepContentsMounted]="true">
+      <ng-template>
+        <ion-datetime
+          [id]="datetimeId()"
+          presentation="date">
+        </ion-datetime>
+      </ng-template>
+    </ion-modal>
+  }
+</div>
