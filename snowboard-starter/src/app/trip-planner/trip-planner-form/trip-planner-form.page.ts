@@ -40,8 +40,8 @@ export class TripPlannerFormPage implements OnInit {
     // Create the form when the trip planner page initalizes
     this.tripForm = this.fb.group({
       destination: ['', [Validators.required, this.destinationValidation]],
-      arrivalDate: ['', [Validators.required]],
-      departureDate: ['', [Validators.required]],
+      arrivalDate: [null, [Validators.required]],
+      departureDate: [null, [Validators.required]],
       budget: [0.00, [Validators.required, this.budgetValidation]]
     })
   }
@@ -75,5 +75,12 @@ export class TripPlannerFormPage implements OnInit {
     }
 
     return Object.keys(errors).length ? errors : null;
+  }
+
+  submitTripForm() {
+    console.log(this.tripForm.get('destination')?.value);
+    console.log(this.tripForm.get('arrivalDate')?.value);
+    console.log(this.tripForm.get('departureDate')?.value);
+    console.log(this.tripForm.get('budget')?.value);
   }
 }

@@ -6,29 +6,33 @@
     <form [formGroup]="tripForm">
       <app-form-input
         title="Destination"
-        placeholder="e.g., Beech Mountain, NC, USA">
+        placeholder="e.g., Beech Mountain, NC, USA"
+        [control]="tripForm.controls['destination']">
       </app-form-input>
       <div class="trip-planner-dates">
         <app-form-input
           title="Arrival Date"
           type="date"
-          datetimeId="arrival">
+          datetimeId="arrival"
+          [control]="tripForm.controls['arrivalDate']">
         </app-form-input>
         <app-form-input
           title="Departure Date"
           type="date"
-          datetimeId="departure">
+          datetimeId="departure"
+          [control]="tripForm.controls['departureDate']">
         </app-form-input>
       </div>
       <app-form-input
         title="Budget ($)"
-        placeholder="e.g., 2500">
+        placeholder="e.g., 2500"
+        [control]="tripForm.controls['budget']">
       </app-form-input>
     </form>
   </div>
   <div class="submit-button">
     <ion-buttons>
-      <ion-button>Create Trip</ion-button>
+      <ion-button (click)="submitTripForm()">Create Trip</ion-button>
     </ion-buttons>
   </div>
 </ion-content>

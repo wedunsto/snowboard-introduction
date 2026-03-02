@@ -1,4 +1,5 @@
 import { Component, input } from '@angular/core';
+import { AbstractControl } from '@angular/forms';
 import { 
   IonInput,
   IonDatetime,
@@ -27,4 +28,5 @@ export class FormInputComponent {
   placeholder = input<string>('');
   type = input<inputType>('destination');
   datetimeId = input<datetimeId>('arrival');
+  control = input<AbstractControl | null>(null);
 }
