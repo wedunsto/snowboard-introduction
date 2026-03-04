@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   AbstractControl,
@@ -14,6 +14,7 @@ import {
 } from '@ionic/angular/standalone';
 import { HeaderMenuComponent } from 'src/app/shared/components/header-menu/header-menu.component';
 import { FormInputComponent } from '../components/form-input/form-input.component';
+import { TripPlannerService } from 'src/app/core/services/tripPlanner/tripPlanner.service';
 
 @Component({
   selector: 'app-trip-planner-form',
@@ -32,7 +33,10 @@ import { FormInputComponent } from '../components/form-input/form-input.componen
 })
 export class TripPlannerFormPage implements OnInit {
 
-  constructor(private fb: FormBuilder) { }
+  constructor(
+    private fb: FormBuilder,
+    private tripPlannerService: TripPlannerService
+  ) { }
 
   tripForm !: ReturnType<FormBuilder['group']>;
 
@@ -78,9 +82,19 @@ export class TripPlannerFormPage implements OnInit {
   }
 
   submitTripForm() {
-    console.log(this.tripForm.get('destination')?.value);
-    console.log(this.tripForm.get('arrivalDate')?.value);
-    console.log(this.tripForm.get('departureDate')?.value);
-    console.log(this.tripForm.get('budget')?.value);
+    const destination: string = this.tripForm.get('destination')?.value;
+    const arrivalDate: Date = new Date(this.tripForm.get('arrivalDate')?.value);
+    const departureDate: Date = new Date(this.tripForm.get('departureDate')?.value);
+    const budget: number = parseFloat(this.tripForm.get('budget')?.value);
+
+    this.tripPlannerService.createTripPlan({
+      destination,
+      arrivalDate,
+      departureDate,
+      budget
+    }).subscribe({
+      next: (res) => console.log('Trip plan created: ', res),
+      error: (err) => console.error('Create trip failed: ', err),
+    });
   }
 }

@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiBaseUrl: 'http://localhost:5016', // local back-end dev server
+  endpoints: {
+    createTrip: '/trips/createTrip'
+  }
 };
 
 /*
