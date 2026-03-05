@@ -6,8 +6,10 @@ export interface TripPlannerRequest {
 }
 
 export interface TripPlannerResponse {
+    id: number;
     destination: string;
     arrivalDate: Date;
     departureDate: Date;
-    budget: number
+    budget: number;
+    completed: boolean
 }

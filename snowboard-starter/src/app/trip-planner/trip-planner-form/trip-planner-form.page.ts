@@ -15,6 +15,7 @@ import {
 import { HeaderMenuComponent } from 'src/app/shared/components/header-menu/header-menu.component';
 import { FormInputComponent } from '../components/form-input/form-input.component';
 import { TripPlannerService } from 'src/app/core/services/tripPlanner/tripPlanner.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-trip-planner-form',
@@ -37,6 +38,8 @@ export class TripPlannerFormPage implements OnInit {
     private fb: FormBuilder,
     private tripPlannerService: TripPlannerService
   ) { }
+
+  router= inject(Router);
 
   tripForm !: ReturnType<FormBuilder['group']>;
 
@@ -81,7 +84,17 @@ export class TripPlannerFormPage implements OnInit {
     return Object.keys(errors).length ? errors : null;
   }
 
+  // Called when a trip plan is successfully created
+  navigateToHome(): void {
+    this.router.navigate(['home']);
+  }
+
   submitTripForm() {
+    if (this.tripForm.invalid) {
+      this.tripForm.markAllAsTouched();
+      return;
+    }
+
     const destination: string = this.tripForm.get('destination')?.value;
     const arrivalDate: Date = new Date(this.tripForm.get('arrivalDate')?.value);
     const departureDate: Date = new Date(this.tripForm.get('departureDate')?.value);
@@ -93,7 +106,7 @@ export class TripPlannerFormPage implements OnInit {
       departureDate,
       budget
     }).subscribe({
-      next: (res) => console.log('Trip plan created: ', res),
+      next: () => this.navigateToHome(),
       error: (err) => console.error('Create trip failed: ', err),
     });
   }

@@ -9,6 +9,7 @@ export class TripPlannerService {
     private http = inject(HttpClient);
     private base = environment.apiBaseUrl;
     private createTripPlanEndpoint = environment.endpoints.createTrip;
+    private getTripPlansEndpoint = environment.endpoints.getTrips;
 
     /**
      * Create a new trip plan
@@ -18,6 +19,16 @@ export class TripPlannerService {
         return this.http.post<TripPlannerResponse>(
             `${this.base}${this.createTripPlanEndpoint}`,
             payload
+        );
+    }
+
+    /**
+     * Get all trip plans
+     * @returns an an array of all trip plans
+     */
+    public getTripPlans(): Observable<TripPlannerResponse[]> {
+        return this.http.get<TripPlannerResponse[]>(
+            `${this.base}${this.getTripPlansEndpoint}`
         );
     }
 }
