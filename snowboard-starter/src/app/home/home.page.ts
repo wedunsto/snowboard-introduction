@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { OnInit } from '@angular/core';
 import { TripPlannerService } from '../core/services/tripPlanner/tripPlanner.service';
 import { TripPlannerResponse } from '../core/models/tripPlanner/tripPlanner.model';
+import { TripPlanDetailCardComponent } from '../trip-planner/components/trip-plan-detail-card/trip-plan-detail-card.component';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,8 @@ import { TripPlannerResponse } from '../core/models/tripPlanner/tripPlanner.mode
   standalone: true,
   imports: [
     HeaderComponent,
-    IonContent
+    IonContent,
+    TripPlanDetailCardComponent
   ],
 })
 export class HomePage implements OnInit {
@@ -25,8 +27,11 @@ export class HomePage implements OnInit {
     this.tripPlannerService.getTripPlans()
     .subscribe({
       next: (tripPlans) => {
-        this.tripPlans = tripPlans;
-        console.log(this.tripPlans);
+        this.tripPlans = tripPlans.map(tripPlan => ({
+          ...tripPlan,
+          arrivalDate: new Date(tripPlan.arrivalDate),
+          departureDate: new Date(tripPlan.departureDate)
+        }));
       },
       error: (err) => {
         console.log(err);

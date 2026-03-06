@@ -1,0 +1,29 @@
+.trip-plan-detail-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    border: 1px solid aliceblue;
+
+    .trip-plan-detail-image {
+        width: 100%;
+        border-radius: 0.5rem 0.5rem 0 0;
+        overflow: hidden;
+    }
+
+    .trip-plan-destination {
+        padding: 0.25rem;
+        font-size: 1.5rem;
+    }
+
+    .trip-plan-detail-dates {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        padding: 0.25rem;
+    }
+
+    .trip-plan-budget {
+        padding: 0.25rem;
+    }
+}

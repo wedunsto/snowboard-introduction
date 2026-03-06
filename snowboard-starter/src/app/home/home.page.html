@@ -13,4 +13,16 @@
       <span class="menu-button-text">Plan A Trip</span>
     </button>
   </div>
+  <div class="trip-plan-details">
+    @for (tripPlan of tripPlans; track tripPlan.id) {
+      <app-trip-plan-detail-card
+        [destination]="tripPlan.destination"
+        [arrivalDate]="tripPlan.arrivalDate"
+        [departureDate]="tripPlan.departureDate"
+        [budget]="tripPlan.budget"
+        [completed]="tripPlan.completed"
+      >
+      </app-trip-plan-detail-card>
+    }
+  </div>
 </ion-content>

@@ -21,4 +21,8 @@ ion-content {
       }
     }
   }
+  .trip-plan-details {
+    display: flex;
+    flex-direction: row;
+  }
 }

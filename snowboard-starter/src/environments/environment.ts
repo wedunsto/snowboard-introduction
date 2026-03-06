@@ -6,7 +6,8 @@ export const environment = {
   production: false,
   apiBaseUrl: 'http://localhost:5016', // local back-end dev server
   endpoints: {
-    createTrip: '/trips/createTrip'
+    createTrip: '/trips/createTrip',
+    getTrips: '/trips/getTrips'
   }
 };
 
