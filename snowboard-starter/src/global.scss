@@ -42,3 +42,34 @@
     gap: 1rem;
     padding: 0.5rem;
 }
+
+ion-button {
+  --background: transparent;
+  --background-hover: transparent;
+  --background-focused: transparent;
+  --background-activated: transparent;
+
+  --color: inherit;
+  --box-shadow: none;
+  --border-radius: 0;
+
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --padding-start: 0;
+  --padding-end: 0;
+
+  margin: 0;
+  width: auto;
+  height: auto;
+}
+
+ion-button::part(native) {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+}

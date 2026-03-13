@@ -1,9 +1,14 @@
 import { Component, input } from '@angular/core';
+import { IonButton } from '@ionic/angular/standalone'
 
 @Component({
   selector: 'app-trip-plan-detail-card',
+  standalone: true,
   templateUrl: './trip-plan-detail-card.component.html',
   styleUrls: ['./trip-plan-detail-card.component.scss'],
+  imports: [
+    IonButton
+  ]
 })
 export class TripPlanDetailCardComponent {
   destination = input<string>('');
@@ -23,5 +28,9 @@ export class TripPlanDetailCardComponent {
     );
 
     return formattedDate;
+  }
+
+  openTripPlanDetails(): void {
+    console.log('test');
   }
 }

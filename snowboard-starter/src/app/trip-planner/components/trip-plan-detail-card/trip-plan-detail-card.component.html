@@ -1,11 +1,13 @@
-<div class="trip-plan-detail-container">
-  <img
-    src="/assets/icon/ski-resort.jpg" 
-    class="trip-plan-detail-image"/>
-  <p class="trip-plan-destination">{{ destination() }}</p>
-  <div class="trip-plan-detail-dates">
-    <p>{{ formatDate(arrivalDate()) }}</p>
-    <p>{{ formatDate(departureDate()) }}</p>
-  </div>
-  <p class="trip-plan-budget">${{ budget().toFixed(2) }} budget</p>
-</div>
+<ion-button (click)="openTripPlanDetails()">
+  <div class="trip-plan-detail-container">
+    <img
+      src="/assets/icon/ski-resort.jpg" 
+      class="trip-plan-detail-image"/>
+    <p class="trip-plan-destination">{{ destination() }}</p>
+    <div class="trip-plan-detail-dates">
+      <p>{{ formatDate(arrivalDate()) }}</p>
+      <p>{{ formatDate(departureDate()) }}</p>
+    </div>
+    <p class="trip-plan-budget">${{ budget().toFixed(2) }} budget</p>
+    </div>
+</ion-button>
