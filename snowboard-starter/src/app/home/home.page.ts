@@ -2,7 +2,6 @@ import { Component, inject } from '@angular/core';
 import { HeaderComponent } from '../shared/components/header/header.component';
 import { IonContent } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
-import { OnInit } from '@angular/core';
 import { TripPlannerService } from '../core/services/tripPlanner/tripPlanner.service';
 import { TripPlannerResponse } from '../core/models/tripPlanner/tripPlanner.model';
 import { TripPlanDetailCardComponent } from '../trip-planner/components/trip-plan-detail-card/trip-plan-detail-card.component';
@@ -18,12 +17,12 @@ import { TripPlanDetailCardComponent } from '../trip-planner/components/trip-pla
     TripPlanDetailCardComponent
   ],
 })
-export class HomePage implements OnInit {
+export class HomePage {
   constructor(private tripPlannerService: TripPlannerService) {}
 
   tripPlans: TripPlannerResponse[] = [];
 
-  ngOnInit(): void {
+  ionViewDidEnter(): void {
     this.tripPlannerService.getTripPlans()
     .subscribe({
       next: (tripPlans) => {
